@@ -1,0 +1,31 @@
+.socialLogin {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  .socialLogin__text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+  }
+  .socialLogin__github {
+    background-color: black;
+    margin-bottom: 10px;
+    a {
+      color: white;
+    }
+  }
+  .socialLogin__kakao {
+    background-color: rgb(216, 216, 0);
+    a {
+      color: rgb(75, 23, 23);
+    }
+  }
+}

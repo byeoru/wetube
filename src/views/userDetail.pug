@@ -1,0 +1,24 @@
+extends layouts/main
+
+block content
+    .userDetail__container
+        .user__profile
+            img.profile-avatar(src=user.avatarUrl)
+            .profile__info
+                h4.info__name=user.name
+                h5.info__email=user.email
+                if (loggedUser && user) && (loggedUser.id === user.id)
+                    .account__link
+                        span.link__github
+                            a(href=routes.github)
+                                i.fab.fa-github
+                        span.link__kakao
+                            a(href=routes.kakao)
+                                i.fas.fa-comment
+            if (loggedUser && user) && (loggedUser.id === user.id )
+                .profile__edit
+                    a(href=`/user${routes.editProfile}`)
+                        button.editProfile__button Edit Profile
+                .changePassword
+                    a(href=`/user${routes.changePassword}`)
+                        button.changePassword__button Change Password

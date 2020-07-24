@@ -1,0 +1,16 @@
+extends layouts/main
+
+block content
+    .join__container
+        .join__left
+            span.left__text JOIN
+            span.left__logo
+                i.fab.fa-youtube
+        .form__container
+            form(action=routes.join, method="post")
+                input(type="text", name="name", placeholder="name", required=true)
+                input(type="email", name="email", placeholder="email", required=true)
+                input(type="password", name="password1", placeholder="password", required=true)
+                input(type="password", name="password2", placeholder="verify password", required=true)
+                input(type="submit", value="JOIN")
+            include ./partials/socialLogin

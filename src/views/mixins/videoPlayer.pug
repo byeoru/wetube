@@ -1,0 +1,23 @@
+mixin videoPlayer(video = {})
+    .videoPlayer#jsVideoPlayer
+        video#jsVideo(src=`/${video.videoFile}`)
+        .videoPlayer__top#jsVideoPlayerTop
+            a(href=routes.home)
+                span.top__backBtn
+                    i.fas.fa-chevron-left
+            span.top__videoTitle=video.title
+        .videoPlayer__bottom#jsVideoPlayerBottom
+            ul
+                li.bottom__playBtn#jsPlayBtn
+                    i.fas.fa-play
+                li.bottom__progressBar
+                    .progressBar__total#jsTotalPgBar
+                        .progressBar__current#jsCurrentPgBar
+                li.bottom__time
+                    span.time__current#jsCurrentTime 00:00:00
+                    span  / 
+                    span.time__total#jsTotalTime 00:00:00
+                li.bottom__volume#jsVolumeBtn
+                    i.fas.fa-volume-up
+                li.bottom__fullscreenBtn#jsFullscreenBtn
+                    i.fas.fa-expand

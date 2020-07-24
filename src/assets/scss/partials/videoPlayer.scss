@@ -1,0 +1,86 @@
+.videoPlayer {
+  width: 58vw;
+  height: 29vw;
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+  justify-content: center;
+  background-color: black;
+  &:hover > div {
+    opacity: 1;
+  }
+  video {
+    height: 100%;
+  }
+  & > div {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .videoPlayer__top {
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+    color: rgb(218, 218, 218);
+    .top__backBtn {
+      margin-right: 20px;
+      cursor: pointer;
+      color: rgb(218, 218, 218);
+    }
+  }
+  .videoPlayer__bottom {
+    width: 80%;
+    height: 30px;
+    bottom: 5px;
+    padding: 0 15px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(218, 218, 218);
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .bottom__playBtn {
+      margin-right: 1%;
+      cursor: pointer;
+    }
+    .bottom__progressBar {
+      width: 70%;
+      height: 5px;
+      border-radius: 3px;
+      margin-right: 2%;
+      position: relative;
+      background-color: $progressbg;
+      .progressBar__total {
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        border-radius: 10px;
+        cursor: pointer;
+        .progressBar__current {
+          height: 100%;
+          border-radius: inherit;
+          position: absolute;
+          background-color: $currentpgbg;
+        }
+      }
+    }
+    .bottom__time {
+      min-width: 130px;
+      margin-right: 1%;
+    }
+    .bottom__volume {
+      width: 18px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .bottom__fullscreenBtn {
+      width: 14px;
+      cursor: pointer;
+    }
+  }
+}
